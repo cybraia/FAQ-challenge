@@ -1,0 +1,92 @@
+
+body{
+    background-image: linear-gradient(to bottom,hsl(273, 75%, 66%),hsl(240, 73%, 65%)); 
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+h1{
+    padding-top: 20px;
+}
+
+#img1{
+    width: auto;
+    height: auto;
+    position: relative;
+    top: 260px;
+    left: 10px;
+    z-index: 1;
+    box-shadow: darkblue;
+}
+
+#img2{
+    overflow: hidden;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 30px;
+    left: -60px;
+    z-index: 1;
+    box-shadow: darkblue;
+}
+
+.img3{
+    /*position: relative;
+    left: 90%; */
+    position: absolute;
+    top: 127px;
+    left: 920px;
+}
+
+.content{
+    padding-left: 500px;
+    font-family: 'Kumbh Sans',sans-serif;
+    font-size: 14px;
+    font-weight: 400,700;
+    color: hsl(237, 12%, 33%);
+    background-image: url(faq-accordion-card-main/images/bg-pattern-desktop.svg);
+    background-color: white;
+    height: 460px;
+    width: 460px;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.dot {
+    display: none;
+}
+
+
+label {
+    /* The combined element: the input.faq is the checkbox combined with the label.faq_label creates a clickable line of text */
+    padding: 0.1875em 0.1875em 0.1875em 0.1875em;
+    /* Padding around the label */
+    display: block !important;
+    /* Displayed this combined element as a block */
+    cursor: pointer !important;
+    /* When the cursor hovers over this combined element display as a pointer to show it is clickable */
+    border-bottom: 1px dotted #9893a3;
+    /* Border underneath label */
+}
+  
+  .slider {
+    /* The combined element of the input + the label + the slider = text section which is currently hidden */
+    overflow: hidden;
+    /* text which runs outside of the given space is hidden */
+    max-height: 0;
+    /* Max-height */
+  }
+  
+  input:checked+label {}
+  
+  /* The combined element: input.faq & label.faq_label when they have been 'checked' i.e. clicked */
+  
+  input:checked+label+.slider {
+    overflow: hidden;
+    max-height: 500px;
+    /* approximate max height */
+    padding: 4px 0px 0px 0px;
+  }  
